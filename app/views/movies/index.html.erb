@@ -1,0 +1,14 @@
+<h1>Movies#index</h1>
+<p>Find me in app/views/movies/index.html.erb</p>
+
+<ul>
+<% @movies.each do |movie| %>
+  <li><%= link_to movie.title, movie_path(movie) %></li>
+<% end %>
+</ul>
+
+<ul>
+<h6>movie view controller index</h6>
+<li><%= link_to 'Search', search_path(@search) %></li>
+<li><%= link_to 'Add movie', new_movie_path(@new) %></li>
+</ul>
