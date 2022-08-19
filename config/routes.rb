@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'movies#index'
   get 'movies/search', to: 'movies#search', as: :search
   # get 'movies/new'
   # get 'movies/show'
@@ -9,10 +10,8 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
 
   resources :movies
   # resources :search, only: %i[index]
-
   # resources :movies, :search, only: %i[index]
 end
