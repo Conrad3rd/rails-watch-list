@@ -1,0 +1,10 @@
+<h1>Lists#new</h1>
+<p>Find me in app/views/lists/new.html.erb</p>
+
+
+<h6>New list</h6>
+<%= simple_form_for [@list] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
